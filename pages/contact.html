@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/contact.css">
+
+  <!-- external links -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <main>
+
+    <div class="contactNumber">
+      <div class="content">
+        <h1>Faça uma reserva</h1>
+        <p>(11) 9999-9999</p>
+        <img src="../assets/img/barra-horizontal.png" alt="Barra Desenhada" >
+      </div>
+    </div>
+
+    <section class="msgContact">
+      <div class="msgContactContent">
+        <h1>Entre em Contato</h1>
+        <p>Preencha o formulario abaixo para enviar sua mensagem.</p>
+        <form action="">
+          <div class="name">
+            <label for="name">
+              Nome Completo
+              <span class="requiredId">*</span>
+            </label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="email">
+            <label for="email">
+              Email
+              <span class="requiredId">*</span>
+            </label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="phone">
+            <label for="phone">Telefone</label>
+            <input type="phoneNumber" id="phone" name="phone">
+          </div>
+        
+          <div class="selectUnd">
+            <label for="und">Com Qual Unidade Deseja Falar?</label>
+            <select name="und" id="und">
+              <option value="und1">Unidade 1</option>
+              <option value="und2">Unidade 2</option>
+              <option value="und3">Unidade 3</option>
+            </select>
+          </div>
+
+          <div class="message">
+            <label for="message">
+              Mensagem
+              <span class="requiredId">*</span>
+            </label>
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            <p>Seja o mais descritivel possivel.</p>
+          </div>
+
+          <button type="submit" class="sbmtBtn">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="map-container" style="width: 100%; height: 450px; margin: 20px 0px; border: 1px solid #bbb;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846818!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c4c4c4c4c4c4c4c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbr!4v1610000000000!5m2!1sen!2sbr"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  </main>
+</body>
+</html>

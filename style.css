@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+.bg-img {
+  background-image: url('assets/img/folha-fundo-02.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 670px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header .socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  background-color: #FF8800;
+  margin: 0;
+  padding: 0;
+}
+
+header .socials {
+  width: 65vw;
+}
+
+.socials{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+}
+
+.socials a img {
+  width: 18px;
+  padding: 5px 5px;
+}
+
+.top-menu-container {
+  display: flex;
+  justify-content: center;
+  width:100%;
+  background-color: #fff;
+}
+
+.top-menu {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 65vw;
+  align-items: center;
+}
+
+.side-menu-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+.side-menu-options .hover a {
+  padding: 0px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.side-menu-options .hover a:hover {
+  color: #FF8800;
+}
+
+.side-menu-options .contact a {
+  background-color: #FF8800;
+  color: #fff;
+  padding: 8px 40px 8px 40px;
+  border-radius: 30px;
+  cursor:pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.side-menu-options .contact a:hover {
+  background-color: #C66300;
+  
+}
+
+nav.topMenu{
+  background-color: #fff !important;
+}
+
+.self-showing {
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  background-image: url('assets/img/pizzaria-hero-fundo01.jpg');
+  background-size: cover;
+  height: 726px;
+  background-position: center;
+  background-size:cover;
+}
+
+.self-showing .showing-container {
+  text-align: center;
+  width: 65vw;
+}
+
+.self-showing h1 {
+  font-family: "Berkshire Swash", serif;
+  font-size: 100px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
+  font-weight: 400;
+}
+
+.self-showing p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FF8800;
+}
+
+.self-showing .definition {
+  font-size: 35px;
+  text-shadow: 1px 1px 1px #585858;
+}
+
+.self-showing .complement {
+  color:  #EEE;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 57vw;
+  padding: 20px;
+}
+
+.welcome-container .pz-img {
+  width: 360px !important;
+  height: 558px !important;
+}
+
+.welcome-container .wlcm-texts {
+  width: 50%;
+  max-width: 360px;
+}
+
+.wlcm-text {
+  font-family: "Berkshire Swash", serif;
+  color:#C66300;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.wlcm-texts .reward {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 45px;
+  padding: 10px 0px;
+  color: #292827;
+  padding-bottom: 20px;
+}
+
+.wlcm-texts .info {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #292827;
+  padding-bottom: 20px;
+}
+
+.wlcm-texts .more-about {
+  text-decoration: none;
+  color:#C66300;
+  transition: color 0.3s;
+}
+
+.wlcm-texts .more-about:hover {
+  color:#000;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-image:linear-gradient(to right, rgba(48, 48, 48, 0.85), rgba(48, 48, 48, 0.85)), url('assets/img/pizzaria-hero-fundo02.jpg');
+  background-size: cover;
+  height: 200px;
+  background-position: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 65vw;
+  color: #fff;
+  align-items: end;
+  padding-bottom: 10px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #fff;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}

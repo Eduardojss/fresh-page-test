@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- header / nav bar -->
+  <header>
+    <div class="socials-container">
+      <div class="socials">
+        <a href="#" target="_blank"><img src="assets/img/img2.svg" alt="facebook"></a>
+        <a href="#" target="_blank"><img src="assets/img/img3.svg" alt="twitter"></a>
+        <a href="#" target="_blank"><img src="assets/img/img1.svg" alt="instagram"></a>
+      </div>
+    </div>
+
+    <div class="top-menu-container">
+      <div class="top-menu">
+        <a href="#"><img src="assets/img/fresco-logo-pequeno.png" alt="Fresco logo"></a>
+        
+        <nav class="side-menu-options">
+          <div class="hover" ><a href="/" >Home</a></div>
+          <div class="hover" ><a href="/menu" >Cardápio</a></div>
+          <div class="hover" ><a href="/about" >Quem Somos</a></div>
+          <div class="hover" ><a href="/news" >Notícias</a></div>
+          <div class="contact"><a href="/contact" >Contato</a></div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <!-- footer -->
+  <footer>
+    <span class="footer">
+        <p>Criado por Jhon Doe | <a href="https://github.com/Eduardojss/Eduardojss">github</a></p>
+      </span>
+  </footer>
+
+  <script>
+    document.addEventListener('click', (e) => {
+      const {target} = e;
+      if(!target.matches("nav div a")) return;
+      e.preventDefault();
+
+      router();
+    })
+
+    const pages = {
+      "/": {
+        template: "/pages/home.html",
+        title: "",
+        desc: "",
+      },
+      "/menu": {
+        template: "/pages/menu.html",
+        title: "",
+        desc: "",
+      },
+      "/about": {
+        template: "/pages/about.html",
+        title: "",
+        desc: "",
+      },
+      "/news": {
+        template: "/pages/news.html",
+        title: "",
+        desc: "",
+      },
+      "/contact": {
+        template: "/pages/contact.html",
+        title: "",
+        desc: "",
+      },
+    }
+
+    const router = (event) => {
+      event = event || window.event;
+      event.preventDefault();
+      window.history.pushState({}, '', event.target.href);
+
+      locationHandler();
+    }
+
+    const locationHandler = async () => {
+      const location = window.location.pathname;
+      if(location.length = 0){
+        location = "/";
+      }
+
+      const route = pages[location] || "404 Page Not Found";
+      const html = await fetch(route.template).then(
+        res => res.text());
+        document.getElementById('app').innerHTML = html;
+    } 
+
+    locationHandler();
+  </script>
+</body>
+</html>

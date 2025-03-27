@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+main .contactNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgba(48, 48, 48, 0.85), rgba(48, 48, 48, 0.85)), url('../assets/img/pizzaria-hero-fundo03.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+  min-height: 60vh;
+  color: #C66300;
+}
+
+.content {
+  height: 100%;
+  width: 65vw;
+  margin:auto
+}
+
+.content h1 {
+  font-size: 60px;
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+}
+
+.content p {
+  font-size: 35px;
+  font-family: "josefin Sans", serif;
+  font-weight: 400;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.msgContact {
+  background-image: url('../assets/img/folha-fundo-02.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 670px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: overlay;
+  padding: 30px 0px;
+}
+
+.msgContactContent {
+  padding: 20px;
+  margin: auto;
+  width: 55vw;
+  text-align: center;
+}
+
+.msgContact form {
+  display: grid;
+  text-align: start !important;
+  gap: 30px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 
+  "name name"
+  "email phone"
+  "select select"
+  "message message"
+  "sbmtBtn sbmtBtn";
+  padding: 30px 0px
+}
+.msgContact form div {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.msgContact form div input {
+  min-height: 40px;
+  border: 1px solid #aaa;
+}
+
+.msgContact form div select {
+  min-height: 40px;
+  border: 1px solid #aaa;
+  font-family: 'josefin sans', serif;
+}
+
+.msgContact .name {
+  grid-area: name;
+}
+
+.msgContact .email {
+  grid-area: email;
+}
+
+.msgContact .phone {
+  grid-area: phone;
+}
+
+.msgContact .selectUnd {
+  grid-area: select;
+}
+
+.msgContact .message {
+  grid-area: message;
+}
+
+.msgContact .sbmtBtn {
+  grid-area: sbmtBtn;
+  max-width: 200px;
+  min-height: 50px;
+  border: 1px solid #c7c7c7
+}
+
+.msgContact h1 {
+  font-size: 45px;
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  margin: 20px;
+}
